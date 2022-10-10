@@ -1,2 +1,16 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<body>
+ <p id="notice"></p>
+ <diV class="flash-message">
+ <%=   flash[:hoge]  %>
+ </diV>
+ <p>
+  <strong>Title:</strong>
+  <%=@book.title %>
+ </p>
+ <p>
+  <strong>Body:</strong>
+  <%=@book.body %>
+ </p>
+ <%= link_to "Edit", edit_book_path(@book.id) %>|
+ <%= link_to "Back", books_path %>
+</body>
